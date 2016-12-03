@@ -9,6 +9,11 @@ import android.util.Log;
 
 /**
  * 完成服务端对客户信息的共享
+ * 注意事项：
+ * 1.客户端（别的应用程序）想调用服务端方法接口的时候，aidl包名和文件名必须一致（直接从服务端把aidl文件复制到服务端即可）
+ * 2.AndroidManifest.xml注册时需要注意Service里面这两个方法一定要添加上
+ * android:exported="true"
+ * android:process=":remote"
  */
 
 public class IRemoteService extends Service {
